@@ -58,6 +58,19 @@ console.log("absMaggiore19", crazyDiff(-2, valoreFisso));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+let boundary = function (n) {
+  if ((n >= 20 && n <= 100) || n === 400) {
+    /* ricordati === invece di = */ /* !!!! */
+    return true;
+  }
+  return false;
+};
+
+console.log(boundary(20));
+console.log(boundary(10));
+console.log(boundary(400));
+console.log(boundary(99));
+
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
  La funzione deve aggiungere la parola "EPICODE" all'inizio della stringa fornita, ma se la stringa fornita comincia già con "EPICODE" allora deve
