@@ -38,6 +38,19 @@ console.log("valore diverso", crazySum(2, 4));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const valoreFisso = 19;
+let crazyDiff = function (numAbs) {
+  const diffAbs = Math.abs(numAbs - valoreFisso);
+  if (diffAbs <= valoreFisso) {
+    return diffAbs;
+  } else {
+    return diffAbs * 3;
+  }
+};
+
+console.log("absMinoreUguale19", crazyDiff(2, valoreFisso));
+console.log("absMaggiore19", crazyDiff(-2, valoreFisso));
+
 /* ESERCIZIO 4
  Scrivi una funzione di nome "boundary" che accetta un numero intero n come parametro, e ritorna true se n è compreso tra 20 e 100 (incluso) oppure
  se n è uguale a 400.
