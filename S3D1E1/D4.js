@@ -132,6 +132,18 @@ console.log(reverseString("Melissa"));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+let upperFirst = function (string) {
+  let words = string.split(" ");
+  let capitalizedWords = words.map(function (word) {
+    return word.charAt(0).toUpperCase() + word.slice(1);
+  });
+  let finalString = capitalizedWords.join(" ");
+  return finalString;
+};
+console.log(upperFirst("una stringa formata da diverse parole"));
+
+/* ricordati lo spazio tra " " in split e join!!!!!*/
+
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
