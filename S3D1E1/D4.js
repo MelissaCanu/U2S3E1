@@ -97,6 +97,20 @@ console.log(epify("doesn't start with that word"));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+let check3and7 = function (nPos) {
+  if (nPos % 3 === 0) {
+    return "è un multiplo di 3";
+  } else if (nPos % 7 === 0) {
+    return "è un multiplo di 7";
+  } else {
+    return "non è un multiplo di 3 o 7";
+  }
+};
+
+console.log(check3and7(14));
+console.log(check3and7(4));
+console.log(check3and7(9));
+
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
