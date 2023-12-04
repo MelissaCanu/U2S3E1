@@ -163,3 +163,16 @@ console.log(cutString("Ciao Melissa"));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+let giveMeRandom = function (n) {
+  let arrOfRandNums = [];
+  for (i = 0; i < n; i++) {
+    let randomNum = Math.floor(Math.random() * 11);
+    arrOfRandNums.push(randomNum);
+  }
+  return arrOfRandNums;
+};
+
+/* Math è maiuscoloooo */
+
+console.log(giveMeRandom(5));
