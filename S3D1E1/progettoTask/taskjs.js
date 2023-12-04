@@ -27,13 +27,20 @@ document.addEventListener("DOMContentLoaded", function () {
       /* aggiungo un btn remove dinamicamente quando ho dichiarato di aver completato la task cliccando sul li */
       if (!event.target.querySelector(".btn-remove")) {
         let removeBtn = document.createElement("button");
-        removeBtn.className = "btn-remove";
+        removeBtn.className = "btn-remove btn btn-danger text-white";
         removeBtn.textContent = "Remove Task";
-        event.target.appendChild(removeBtn);
+
+        let liContainer = document.createElement("div");
+        liContainer.className =
+          "d-flex justify-content-between align-items-center";
+        liContainer.appendChild(event.target);
+        liContainer.appendChild(removeBtn);
+
+        taskList.appendChild(liContainer);
 
         /* rimuovo la task quando clicco sul btn-remove */
         removeBtn.addEventListener("click", function (ev) {
-          event.target.remove();
+          liContainer.remove();
         });
       }
     }
@@ -45,9 +52,12 @@ let generateTask = function (taskText, taskList) {
   taskElement.textContent = taskText;
   /* e lo appendo alla taskList */
   taskList.appendChild(taskElement);
+  taskElement.className = "border-bottom border-success my-2";
 
-  /* aggiungo un hr tra i li generati dinamicamente */
-  let hrTraLi = document.createElement("hr");
-  hrTraLi.className = "my-3 bg-success";
-  taskList.appendChild(hrTraLi);
+  //   /* aggiungo un hr tra i li generati dinamicamente */
+  //   let hrTraLi = document.createElement("hr");
+  //   hrTraLi.className = "my-3 bg-success";
+  //   taskList.appendChild(hrTraLi);
+
+  /* facciamo che invece lo tolgo perché non so levarlo dinamicamente XD l'ho aggiunto al taskElement direttamente come b-bottom*/
 };
