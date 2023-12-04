@@ -115,6 +115,14 @@ console.log(check3and7(9));
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
 
+/* devo convertire un array e poi riconvertire a stringa! */
+
+let reverseString = function (string) {
+  let reversedStr = string.split("").reverse().join("");
+  return reversedStr;
+};
+
+console.log(reverseString("Melissa"));
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 8
