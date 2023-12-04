@@ -151,6 +151,13 @@ console.log(upperFirst("una stringa formata da diverse parole"));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+let cutString = function (string) {
+  slicedStr = string.slice(1, -1);
+  return slicedStr;
+};
+
+console.log(cutString("Ciao Melissa"));
+
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
