@@ -26,6 +26,19 @@ document.addEventListener("DOMContentLoaded", function () {
       event.target.classList.toggle(
         "completed"
       ); /* toggle della classe da stilizzare nel css */
+
+      /* aggiungo un btn remove dinamicamente quando ho dichiarato di aver completato la task cliccando sul li */
+      if (!event.target.querySelector(".btn-remove")) {
+        let removeBtn = document.createElement("button");
+        removeBtn.className = "btn-remove";
+        removeBtn.textContent = "Remove Task";
+        event.target.appendChild(removeBtn);
+
+        /* rimuovo la task quando clicco sul btn-remove */
+        removeBtn.addEventListener("click", function (ev) {
+          event.target.remove();
+        });
+      }
     }
   });
 });
