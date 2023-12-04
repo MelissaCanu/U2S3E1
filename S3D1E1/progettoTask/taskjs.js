@@ -15,9 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  const h1 = document.querySelector("h1");
-  h1.style.color = "green";
-
   /* evento click per gestire task completate e aggiungere o togliere la classe "completed" :3 */
 
   taskList.addEventListener("click", function (event) {
@@ -48,4 +45,9 @@ let generateTask = function (taskText, taskList) {
   taskElement.textContent = taskText;
   /* e lo appendo alla taskList */
   taskList.appendChild(taskElement);
+
+  /* aggiungo un hr tra i li generati dinamicamente */
+  let hrTraLi = document.createElement("hr");
+  hrTraLi.className = "my-3 bg-success";
+  taskList.appendChild(hrTraLi);
 };
